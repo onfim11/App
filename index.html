@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sweetist</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+		<script id="panel-init">
+		$(function() {
+			$( "body>[data-role='panel']" ).panel();
+		});
+	</script>
+</head>
+<body>
+<!------------------------------/main header--------------------------------->
+
+	<div class="header">
+		<div class="logo-block">
+		    <a href="#"><img src="images/logo.jpg" alt="logo image"></a>
+		</div>
+		<div class="menu-block">
+		    <a href="#mypanel"><img src="images/menu-b.png" alt="menu icon"></a>
+		</div>
+		
+	</div><!-- /header -->
+  
+<!------------------------------/menu panel--------------------------------->
+  
+   <div class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-none ui-panel-animate ui-panel-open" data-role="panel" data-display="overlay" data-position="right" data-theme="none" id="mypanel">
+        <!-- panel content goes here -->
+        <nav class="main-menu">
+		    <ul class="ui-panel-inner">
+                <li><a class="ui-link" href="#costumer" data-transition="slide">Custumer detail</a></li>
+		        <li><a class="ui-link" data-transition="slide" href="#delivery">Current job</a></li>
+		        <li><a class="ui-link" href="#">Available jobs</a></li>
+		        <li><a class="ui-link" href="#">My earnings</a></li>
+		        <li><a class="ui-link" href="#">Delivery history</a></li>
+		        <li><a class="ui-link" href="#">My account</a></li>
+		        <li><a class="ui-link" href="#">Dashboard</a></li>
+		    </ul>
+		</nav>
+    </div><!-- /panel -->
+
+<!------------------------------/bakery page--------------------------------->        
+<div data-role="page" class="page" id="bakery">
+
+     
+	<div role="main" class="ui-content">
+        <div class="main-content-block">  
+            <div class="image-thumb-block">
+                <div class="block-line">
+                    <img src="images/image-bakare.jpg" alt="">
+                </div>
+                <div class="block-line">
+                    <h1 class="bakary-name">SCHMACKARY'S</h1>
+                </div>
+            </div>
+            <div class="bakare-meta">
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>Bakery address:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>x4185 Beaconsfield Ave. Montreal, QC, H4A 2H4</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>Bakery phone:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>+1 646-801-9866</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>Bakery email:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>contact@info.com</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. Nulla quis neque ut purus consectetur pretium.</p> 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. </p>
+                </div>
+            </div>
+         
+            <div class="block-button">
+                <a href="#" class="ui-btn my-btn-green">show on google map</a>
+            </div>
+        </div>
+	</div><!-- /content -->
+
+	
+</div><!-- /page -->
+<!------------------------------/costumer page--------------------------------->    
+<div data-role="page" class="page" id="costumer">
+	<div role="main" class="ui-content">
+        <div class="main-content-block">  
+            <div class="image-thumb-block">
+                <div class="block-line">
+                   <h2 class="bakary-name">Jone Doe</h2>
+                </div>
+            </div>
+            <div class="bakare-meta">
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>Street:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>4185 Beaconsfield Ave., H4A 2H4</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>Apt #:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>lorem ipsum</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>Cross street:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>4185 Beaconsfield Ave., H4A 2H4</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name">
+                        <span>City:</span>
+                    </div>
+                    <div class="meta-value">
+                        <span>Montreal</span>
+                   </div>
+                </div>
+                <div class="block-line b-mb-15">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. Nulla quis neque ut purus consectetur pretium.</p> 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. </p>
+                </div>
+            </div>
+         
+            <div class="block-button">
+               <div class="block-line">
+                  <a href="#" class="ui-btn my-btn-green">show on google map</a>
+               </div>    
+                <a href="#" class="ui-btn my-btn-orange b-mr-button">Call Customer</a>
+                <a href="#" class="ui-btn my-btn-orange">write message</a>
+            </div>
+        </div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+<!------------------------------/delivery page--------------------------------->
+
+<div data-role="page" class="page" id="delivery">
+	<div role="main" class="ui-content">
+        <div class="main-content-block">  
+            <div class="block-line">
+                <h2 class="page-title">Doughnut Plant <span>to 112 W 29rd St. @ 3:50pm</span></h2>
+                <table class="delivery-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Target Time</th>
+                            <th>Name/Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Begin Delivery</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Pickup Order</td>
+                            <td>3:30pm</td>
+                            <td>Doughnut Plant to 112 W 29rd St. @ 3:50pm</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Completed Dropoff</td>
+                            <td>3:30pm</td>
+                            <td>Jon Smith 212 W. 29th St b/w 7th and 8th ave</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+    
+        </div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+</body>
+</html>
