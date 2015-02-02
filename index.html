@@ -2,17 +2,18 @@
 <html>
 <head>
 	<title>Sweetist</title>
-
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
 	<link rel="stylesheet" href="css/custom.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.js"></script>
-		<script id="panel-init">
+	<script id="panel-init">
 		$(function() {
 			$( "body>[data-role='panel']" ).panel();
 		});
+        
 	</script>
 </head>
 <body>
@@ -30,17 +31,17 @@
   
 <!------------------------------/menu panel---------------------------------->
   
-   <div class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-none ui-panel-animate ui-panel-open" data-role="panel" data-display="overlay" data-position="right" data-theme="none" id="mypanel">
+   <div class="ui-panel ui-panel-position-left ui-panel-display-overlay ui-body-none ui-panel-animate ui-panel-open" data-role="panel" data-display="overlay" data-position="left" data-theme="none" id="mypanel">
         <!-- panel content goes here -->
         <nav class="main-menu">
 		    <ul class="ui-panel-inner">
-                <li><a class="ui-link" href="#costumer" data-transition="slide">Custumer detail</a></li>
-		        <li><a class="ui-link" data-transition="slide" href="#delivery">Current job</a></li>
+                <li><a class="ui-link" href="#CustomerDetail" data-transition="flip">Customer detail</a></li>
+		        <li><a class="ui-link" data-transition="flip" href="#delivery">Current job</a></li>
 		        <li><a class="ui-link" href="#">Available jobs</a></li>
-		        <li><a class="ui-link" href="#">My earnings</a></li>
-		        <li><a class="ui-link" href="#">Delivery history</a></li>
-		        <li><a class="ui-link" href="#">My account</a></li>
-		        <li><a class="ui-link" href="#">Dashboard</a></li>
+		        <li><a class="ui-link" data-transition="flip" href="#Earnings">My earnings</a></li>
+		        <li><a class="ui-link" data-transition="flip" href="#delivery-history">Delivery history</a></li>
+		        <li><a class="ui-link" data-transition="flip" href="#MyAccount">My account</a></li>
+		        <li><a class="ui-link" data-transition="flip" href="#Dashboard">Dashboard</a></li>
 		    </ul>
 		</nav>
     </div><!-- /panel -->
@@ -53,7 +54,9 @@
         <div class="main-content-block">  
             <div class="image-thumb-block">
                 <div class="block-line">
-                    <img src="img/image-bakare.jpg" alt="">
+                   <div class="image-block-cikle">
+                     <img src="img/image-bakare.jpg" alt="">
+                   </div>
                 </div>
                 <div class="block-line">
                     <h1 class="bakary-name">SCHMACKARY'S</h1>
@@ -102,7 +105,7 @@
 	
 </div><!-- /page -->
 <!------------------------------/costumer page---------------------------------->    
-<div data-role="page" class="page" id="costumer">
+<div data-role="page" class="page" id="CustomerDetail">
 	<div role="main" class="ui-content">
         <div class="main-content-block">  
             <div class="image-thumb-block">
@@ -167,10 +170,10 @@
 
 <div data-role="page" class="page" id="delivery">
 	<div role="main" class="ui-content">
-        <div class="main-content-block">  
+        <div class="main-content-block without-padding">  
             <div class="block-line">
-                <h2 class="page-title">Doughnut Plant <span>to 112 W 29rd St. @ 3:50pm</span></h2>
-                <table class="delivery-table">
+                <h2 class="page-title b-mb-15">Doughnut Plant <span>to 112 W 29rd St. @ 3:50pm</span></h2>
+                <table class="delivery-table b-mb-15">
                     <thead>
                         <tr>
                             <th>Step</th>
@@ -184,25 +187,781 @@
                             <td>Begin Delivery</td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td><img src="img/checked.png" alt=""></td>
                         </tr>
                         <tr>
                             <td>Pickup Order</td>
                             <td>3:30pm</td>
                             <td>Doughnut Plant to 112 W 29rd St. @ 3:50pm</td>
-                            <td></td>
+                            <td><a href="#" class="ui-btn my-btn-orange for-table">Complete</a></td>
                         </tr>
                         <tr>
                             <td>Completed Dropoff</td>
                             <td>3:30pm</td>
                             <td>Jon Smith 212 W. 29th St b/w 7th and 8th ave</td>
-                            <td></td>
+                            <td><a href="#" class="ui-btn my-btn-orange for-table">Complete</a></td>
                         </tr>
                     </tbody>
 
                 </table>
+                <div class="padding-lr">
+                    <div class="block-line">
+                        <div class="meta-name meta-name-fw">
+                            <span>Notes:</span>
+                        </div>
+                        <p>
+                            <span>2 x Creme Brulee doughnuts (yeast)</span>
+                            <span>2 x Brooklyn Blackout doughnuts</span>
+                            <span>2 x Peanut Butter & Jelly doughnuts</span>
+                        </p>
+                    </div>
+                    <div class="block-line">
+                        <p>
+                            <span>Sales total:</span>
+                            <span><b>$18.50</b></span>
+                        </p>
+                    </div>
+                    <div class="block-line">
+                        <div class="meta-name meta-name-fw">
+                            <span>Special Instructions:</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. Nulla quis neque ut purus consectetur pretium. 
+    </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. Nulla quis neque ut purus consectetur pretium. </p>
+                    </div>
+                </div>
+                <div class="buttom-line">
+                    <div class="block-line">
+                        <a href="#" class="ui-btn my-btn-orange footer-buton"><img src="img/icon-calbakarey.png" alt=""><span>Call bakery</span></a>
+                        <a href="#" class="ui-btn my-btn-orange footer-buton"><img src="img/icon-calcost.png" alt=""><span>call customer</span></a>
+                        <a href="#" class="ui-btn my-btn-orange footer-buton"><img src="img/icon-mescoust.png" alt=""><span>Message Customer</span></a>
+                        <a href="#" class="ui-btn my-btn-orange footer-buton"><img src="img/icon-consupport.png" alt=""><span>contact Support</span></a>
+                    </div>
+                </div>
             </div>
     
+        </div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+<!------------------------------/dashboard page---------------------------------->
+
+<div data-role="page" class="page" id="Dashboard">
+    <div data-role="header" class="header-page">
+        <h2>Assigned Deliveries</h2>
+    </div>
+	<div role="main" class="ui-content padding-lr">
+       <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-time-fh">Delivery Time</span>
+                <span class="del-time-clock">03:20</span>
+                <span class="del-time-dn">pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+               <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line ">
+                   <p>
+                       <span class="center-text">Delivery for X bakery to Y street near Z ave starts in:</span>
+                    </p>    
+                </div>
+                <div class="block-line">
+                    <p class="center-text">
+                        <span class="main-later">3</span>hours
+                        <span class="big-bot"> :</span>
+                        <span class="main-later">20</span>minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+               <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-time-fh">Delivery Time</span>
+                <span class="del-time-clock">05:20</span>
+                <span class="del-time-dn">pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+               <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line ">
+                   <p>
+                       <span class="center-text">Delivery for X bakery to Y street near Z ave starts in:</span>
+                    </p>    
+                </div>
+                <div class="block-line">
+                    <p class="center-text">
+                        <span class="main-later">3</span>hours
+                        <span class="big-bot"> :</span>
+                        <span class="main-later">20</span>minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+               <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-time-fh">Delivery Time</span>
+                <span class="del-time-clock">06:40</span>
+                <span class="del-time-dn">pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+               <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line ">
+                   <p>
+                       <span class="center-text">Delivery for X bakery to Y street near Z ave starts in:</span>
+                    </p>    
+                </div>
+                <div class="block-line">
+                    <p class="center-text">
+                        <span class="main-later">3</span>hours
+                        <span class="big-bot"> :</span>
+                        <span class="main-later">20</span>minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+               <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-time-fh">Delivery Time</span>
+                <span class="del-time-clock">07:40</span>
+                <span class="del-time-dn">pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+               <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line ">
+                   <p>
+                       <span class="center-text">Delivery for X bakery to Y street near Z ave starts in:</span>
+                    </p>    
+                </div>
+                <div class="block-line">
+                    <p class="center-text">
+                        <span class="main-later">3</span>hours
+                        <span class="big-bot"> :</span>
+                        <span class="main-later">20</span>minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+	</div><!-- /content -->
+</div><!-- /page -->
+
+
+
+<!------------------------------/delivery history page---------------------------------->
+
+<div data-role="page" class="page" id="delivery-history">
+    <div data-role="header" class="header-page">
+        <form>
+        <div class="ui-field-contain">
+            <label for="select-sort">Sort by:</label>
+            <select name="select-sort" id="select-sort">
+                <option value="1" selected>Bakery Name</option>
+                <option value="2">SCHMACKARY'S</option>
+                <option value="3">SCHMACKARY'S</option>
+                <option value="4">SCHMACKARY'S</option>
+            </select>
+        </div>
+        </form>
+    </div>
+	<div role="main" class="ui-content padding-lr">
+       <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-difr-block">1.04.2015 at 5:30pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+                <div class="bakare-meta">
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Bakery address:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>x4185 Beaconsfield Ave. Montreal, QC, H4A 2H4</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Delivered at:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Sunday, January 4, 2015 at 5:30pm</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Customer info:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Jone Doe <br>zip 41854</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Job Type:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span class="bicycle"></span>
+                       </div>
+                    </div>
+
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+        <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-difr-block">1.04.2015 at 5:30pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+                <div class="bakare-meta">
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Bakery address:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>x4185 Beaconsfield Ave. Montreal, QC, H4A 2H4</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Delivered at:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Sunday, January 4, 2015 at 5:30pm</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Customer info:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Jone Doe <br>zip 41854</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Job Type:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span class="bicycle"></span>
+                       </div>
+                    </div>
+
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+        <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-difr-block">1.04.2015 at 5:30pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+                <div class="bakare-meta">
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Bakery address:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>x4185 Beaconsfield Ave. Montreal, QC, H4A 2H4</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Delivered at:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Sunday, January 4, 2015 at 5:30pm</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Customer info:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Jone Doe <br>zip 41854</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Job Type:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span class="bicycle"></span>
+                       </div>
+                    </div>
+
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+        <!---------colabsipel block---------------------------->
+        <div data-role="collapsible" data-inset="false" class="b-mb-15">
+            <h4>
+            SCHMACKARY'S
+            <span class="collapsible-header-block-right"> 
+                <span class="del-difr-block">1.04.2015 at 5:30pm</span>
+            </span>
+            </h4>
+            
+            <div class="collapsipel-block">
+                <div class="bakare-meta">
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Bakery address:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>x4185 Beaconsfield Ave. Montreal, QC, H4A 2H4</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Delivered at:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Sunday, January 4, 2015 at 5:30pm</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Customer info:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span>Jone Doe <br>zip 41854</span>
+                       </div>
+                    </div>
+                    <div class="block-line b-mb-15">
+                        <div class="meta-name">
+                            <span>Job Type:</span>
+                        </div>
+                        <div class="meta-value">
+                            <span class="bicycle"></span>
+                       </div>
+                    </div>
+
+                </div>
+                <div class="block-line b-mb-15">
+                    <span class="divider-block"></span>
+                </div>
+                <div class="block-line">
+                    <div class="meta-name meta-name-fw">
+                        <span>Notes:</span>
+                    </div>
+                    <p>
+                        <span>2 x Creme Brulee doughnuts (yeast)</span>
+                        <span>2 x Brooklyn Blackout doughnuts</span>
+                        <span>2 x Peanut Butter & Jelly doughnuts</span>
+                    </p>
+                </div>
+                <div class="block-line">
+                    <p>
+                        <span>Sales total:</span>
+                        <span><b>$18.50</b></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!------------/colabsipel block--------------------------------------------->
+       
+	</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!------------------------------/costumer page---------------------------------->    
+<div data-role="page" class="page" id="Earnings">
+	<div role="main" class="ui-content">
+        <div class="main-content-block without-padding">  
+           <div class="block-line title-bordered b-mb-15">
+                <h1 class="bakary-name left-text">My Earnings</h1>
+           </div>
+           <div class="block-line">
+               <p>
+                   <span class="center-text">Earnings for the last 3 months</span>
+                </p>    
+           </div>
+           <div class="block-line b-mb-15">
+               <div class="block-charset">
+                   <img src="img/grafics.png" alt="charset">
+               </div>
+           </div>
+           <div class="erning-table">
+               <table class="table-for-ernings">
+                   <thead>
+                       <tr>
+                           <th>Week</th>
+                           <th>Deliveries made</th>
+                           <th>Total value of orders</th>
+                           <th>Delivery commission</th>
+                       </tr>
+                   </thead>
+                   <tbody >
+                       <tr>
+                           <td>1</td>
+                           <td>25</td>
+                           <td>400 $</td>
+                           <td>400 $</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>40</td>
+                           <td>600 $</td>
+                           <td>600 $</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>40</td>
+                           <td>600 $</td>
+                           <td>600 $</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>40</td>
+                           <td>600 $</td>
+                           <td>600 $</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>40</td>
+                           <td>600 $</td>
+                           <td>600 $</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>40</td>
+                           <td>600 $</td>
+                           <td>600 $</td>
+                       </tr>
+                       <tr>
+                           <td>2</td>
+                           <td>40</td>
+                           <td>600 $</td>
+                           <td>600 $</td>
+                       </tr>
+                       <tfoot>
+                         <tr>
+                               <td class="table-total">total</td>
+                               
+                          </tr>
+                          <tr>
+                               <td>2</td>
+                               <td>40</td>
+                               <td>600 $</td>
+                               <td>600 $</td>
+                          </tr>
+                       </tfoot>
+                   </tbody>
+               </table>
+           </div> 
+        </div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+<!------------------------------/Account page---------------------------------->        
+<div data-role="page" class="page" id="MyAccount">
+
+     
+	<div role="main" class="ui-content">
+        <div class="main-content-block">  
+            <div class="image-thumb-block">
+                <div class="block-line">
+                   <div class="image-block-cikle">
+                     <img src="img/image-account.jpg" alt="">
+                   </div>
+                </div>
+                <div class="block-line center-text b-mb-15">
+                    <h1 class="bakary-name for-account">Jon Smith</h1><a href="#" class="ui-btn my-btn-orange for-account">Edit</a>
+                </div>
+            </div>
+            <div class="account-meta">
+                <div class="width-50">
+                    <div class="block-line">
+                        <div class="meta-name meta-name-fw">
+                            <span>Phone number:</span>
+                        </div>
+                        <p>+1 646-801-9866</p>
+                    </div>
+                    <div class="block-line">
+                        <div class="meta-name width-50">
+                            <span>Courier type:</span>
+                        </div>
+                        <div class="width-50 account-span">
+                           <span class="bicycle"></span> 
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="width-50 padding-lr">
+                    <div class="block-line">
+                        <div class="meta-name meta-name-fw">
+                            <span>Bakery email:</span>
+                        </div>
+                        <p>contact_me@info.com</p>
+                    </div>
+                    <div class="block-line">
+                        <div class="meta-name meta-name-fw">
+                            <span>Favorite Sweet:</span>
+                        </div>
+                        <p>lorem ipsum dolor</p>
+                    </div>
+                </div>
+               
+            </div>
+             <div class="block-line b-mb-10">
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <legend class="meta-name meta-name-fw"><span>Locations:</span></legend>
+                        <input name="checkbox-1" id="checkbox-1" type="checkbox" checked>
+                        <label for="checkbox-1">FIDI</label>
+                        <input name="checkbox-2" id="checkbox-2" type="checkbox" checked>
+                        <label for="checkbox-2">UWS</label>
+                        <input name="checkbox-3" id="checkbox-3" type="checkbox" checked>
+                        <label for="checkbox-3">HellK</label>
+                        <input name="checkbox-4" id="checkbox-4" type="checkbox" checked>
+                        <label for="checkbox-4">WeVill</label>
+                        <input name="checkbox-5" id="checkbox-5" checked="" type="checkbox">
+                        <label for="checkbox-5">HellK</label>
+                        <input name="checkbox-6" id="checkbox-6" type="checkbox" checked>
+                        <label for="checkbox-6">WeVill</label>
+                    </fieldset>
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <input name="checkbox-7" id="checkbox-7" type="checkbox" checked>
+                        <label for="checkbox-7">FIDI</label>
+                        <input name="checkbox-8" id="checkbox-8" type="checkbox">
+                        <label for="checkbox-8">UWS</label>
+                        <input name="checkbox-9" id="checkbox-9" type="checkbox" checked>
+                        <label for="checkbox-9">HellK</label>
+                        <input name="checkbox-10" id="checkbox-10" type="checkbox">
+                        <label for="checkbox-10">WeVill</label>
+                        <input name="checkbox-11" id="checkbox-11" checked="" type="checkbox">
+                        <label for="checkbox-11">HellK</label>
+                        <input name="checkbox-12" id="checkbox-12" type="checkbox" checked>
+                        <label for="checkbox-12">WeVill</label>
+                    </fieldset>
+                </div>
+                <div class="block-line b-mb-10">
+                    <div class="meta-name meta-name-fw">
+                        <span>My Schedule:</span>
+                    </div>
+                </div> 
+                <div class="block-line">
+                    <table class="account-time-table">
+                        <tbody>
+                            <tr>
+                                <td><span>8am</span></td>
+                                <td></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span>12pm</span></td>
+                                <td></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td><span class="table-dot"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>4pm</span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td></td>
+                                <td></td>
+                                <td><span class="table-dot"></span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span>8pm</span></td>
+                                <td><span class="table-dot"></span></td>
+                                <td></td>
+                                <td></td>
+                                <td><span class="table-dot"></span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span>12am</span></td>
+                                <td>M</td>
+                                <td>Tu</td>
+                                <td>W</td>
+                                <td>Th</td>
+                                <td>F</td>
+                                <td>Sa</td>
+                                <td>Su</td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
         </div>
 	</div><!-- /content -->
 </div><!-- /page -->

@@ -361,21 +361,21 @@ html body .ui-group-theme-a .ui-radio-on:after,
 	border-color:			#3388cc /*{a-active-background-color}*/;
 }
 /* Focus */
-.ui-page-theme-a .ui-btn:focus,
+/*.ui-page-theme-a .ui-btn:focus,
 html .ui-bar-a .ui-btn:focus,
 html .ui-body-a .ui-btn:focus,
 html body .ui-group-theme-a .ui-btn:focus,
 html head + body .ui-btn.ui-btn-a:focus,
 /* Focus buttons and text inputs with div wrap */
-.ui-page-theme-a .ui-focus,
+/*.ui-page-theme-a .ui-focus,
 html .ui-bar-a .ui-focus,
 html .ui-body-a .ui-focus,
 html body .ui-group-theme-a .ui-focus,
 html head + body .ui-btn-a.ui-focus,
 html head + body .ui-body-a.ui-focus {
 	-webkit-box-shadow: 0 0 12px 	#3388cc /*{a-active-background-color}*/;
-	-moz-box-shadow: 0 0 12px 		#3388cc /*{a-active-background-color}*/;
-	box-shadow: 0 0 12px 			#3388cc /*{a-active-background-color}*/;
+/*	-moz-box-shadow: 0 0 12px 		#3388cc /*{a-active-background-color}*/;
+/*	box-shadow: 0 0 12px 			#3388cc /*{a-active-background-color}*/;
 }
 /* B
 -----------------------------------------------------------------------------------------------------------*/
