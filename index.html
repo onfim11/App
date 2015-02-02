@@ -12,7 +12,12 @@
 	<script id="panel-init">
 		$(function() {
 			$( "body>[data-role='panel']" ).panel();
-		});
+		
+        
+            $('#screenshot-button').click(function(){
+                  $('#screenshot').click();
+              });
+        });
         
 	</script>
 </head>
@@ -170,7 +175,7 @@
 
 <div data-role="page" class="page" id="delivery">
 	<div role="main" class="ui-content">
-        <div class="main-content-block without-padding">  
+        <div class="main-content-block without-padding b-mb-100">  
             <div class="block-line">
                 <h2 class="page-title b-mb-15">Doughnut Plant <span>to 112 W 29rd St. @ 3:50pm</span></h2>
                 <table class="delivery-table b-mb-15">
@@ -230,7 +235,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non quam. Maecenas euismod nunc sed magna. Nulla quis neque ut purus consectetur pretium. </p>
                     </div>
                 </div>
-                <div class="buttom-line">
+                <div class="buttom-line fixed-element">
                     <div class="block-line">
                         <a href="#" class="ui-btn my-btn-orange footer-buton"><img src="img/icon-calbakarey.png" alt=""><span>Call bakery</span></a>
                         <a href="#" class="ui-btn my-btn-orange footer-buton"><img src="img/icon-calcost.png" alt=""><span>call customer</span></a>
@@ -830,6 +835,8 @@
                    <div class="image-block-cikle">
                      <img src="img/image-account.jpg" alt="">
                    </div>
+                   <input type="file" class="inputfile" id="screenshot">
+                  <div id="screenshot-button" class="btn-uploadfile">Upload new photo</div>
                 </div>
                 <div class="block-line center-text b-mb-15">
                     <h1 class="bakary-name for-account">Jon Smith</h1><a href="#" class="ui-btn my-btn-orange for-account">Edit</a>
