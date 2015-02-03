@@ -40,9 +40,9 @@
         <!-- panel content goes here -->
         <nav class="main-menu">
 		    <ul class="ui-panel-inner">
-                <li><a class="ui-link" href="#CustomerDetail" data-transition="flip">Customer detail</a></li>
+                <li><a class="ui-link" data-transition="flip" href="#CustomerDetail">Customer detail</a></li>
 		        <li><a class="ui-link" data-transition="flip" href="#delivery">Current job</a></li>
-		        <li><a class="ui-link" href="#">Available jobs</a></li>
+		        <li><a class="ui-link" data-transition="flip" href="#dashboadr-cleare">Available jobs</a></li>
 		        <li><a class="ui-link" data-transition="flip" href="#Earnings">My earnings</a></li>
 		        <li><a class="ui-link" data-transition="flip" href="#delivery-history">Delivery history</a></li>
 		        <li><a class="ui-link" data-transition="flip" href="#MyAccount">My account</a></li>
@@ -53,8 +53,6 @@
 
 <!------------------------------/bakery page---------------------------------->        
 <div data-role="page" class="page" id="bakery">
-
-     
 	<div role="main" class="ui-content">
         <div class="main-content-block">  
             <div class="image-thumb-block">
@@ -106,9 +104,21 @@
             </div>
         </div>
 	</div><!-- /content -->
-
-	
 </div><!-- /page -->
+
+<!------------------------------/bakery page---------------------------------->        
+<div data-role="page" class="page" id="dashboadr-cleare">
+	<div role="main" class="ui-content">
+       <div class="empty-block">
+            <h4>No assigned deliveries!<br>
+See the available deliveries to find one.</h4>   
+            <div class="block-button">
+                <a href="#" class="ui-btn my-btn-orange btn-emptyblock">Show available jobs</a>
+            </div>
+        </div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
 <!------------------------------/costumer page---------------------------------->    
 <div data-role="page" class="page" id="CustomerDetail">
 	<div role="main" class="ui-content">
@@ -569,7 +579,7 @@
                             <span>Job Type:</span>
                         </div>
                         <div class="meta-value">
-                            <span class="bicycle"></span>
+                            <span class="bicycle car"></span>
                        </div>
                     </div>
 
@@ -636,7 +646,7 @@
                             <span>Job Type:</span>
                         </div>
                         <div class="meta-value">
-                            <span class="bicycle"></span>
+                            <span class="bicycle walk"></span>
                        </div>
                     </div>
 
