@@ -90,6 +90,9 @@ html, body{
 .block-line:after {
     clear: both;
 }
+.b-mb-25{
+    margin-bottom: 25px;
+}
 .b-mb-15{
     margin-bottom: 15px;
 }
@@ -898,10 +901,78 @@ table.account-time-table:after {
 
 }
 
+.meta-blok-for-avjob, .btn{
+    display: inline-block;
+    
+}
+.meta-blok-for-avjob{
+    width: 68%;
+}
+.btn{
+    width: 30%;
+}
+.for-avjob{
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.for-radibuttons{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    color: #8a8885;
+    font-weight: 400 !important;
+    font-family: "mission_gothicregular" !important;
+}
 
+.ui-radio label.bicycle{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/bicycle.png");
+    background-size: cover;
+    overflow: visible;
+    font-weight: 400 !important;
+    font-family: "mission_gothicregular" !important;
+    color: #8A8885 !important;
+    text-transform: uppercase !important;
+    text-shadow: none !important;
+    line-height: 110px;
+    text-align: right;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 14px;
+}
+.ui-radio label.bicycle:before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/radio.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    margin-right: 5px;
+}
+    
+.ui-radio label.ui-radio-on:before{
+    background-image: url("../img/radio-checked.png");
+   
+}   
 
-
-
+.ui-radio label.car{
+    background-image: url("../img/car.png");    
+}
+.ui-radio label.walk{
+    background-image: url("../img/walk.png");
+}
+.big-button{
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
 /** smartphone and desktop **/
 @media only screen and (min-width: 360px) {
    
