@@ -916,15 +916,30 @@ table.account-time-table:after {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.ui-radio.ui-mini{
+    width: 50px;
+    height: 70px;
+    margin-right: 20px !important;
+    border-radius: 0px !important;
+}
 .for-radibuttons{
     display: block;
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
     color: #8a8885;
     font-weight: 400 !important;
     font-family: "mission_gothicregular" !important;
 }
-
+.ui-mini .ui-controlgroup-label {
+    font-size: 14px;
+    display: block;
+    float: left;
+}
+.ui-controlgroup-horizontal .ui-controlgroup-controls {
+    vertical-align: middle;
+    display: block;
+    float: left;
+}
 .ui-radio label.bicycle{
     display: inline-block;
     width: 50px;
@@ -941,7 +956,7 @@ table.account-time-table:after {
     text-align: right;
     position: relative;
     padding-left: 20px;
-    margin-right: 14px;
+    
 }
 .ui-radio label.bicycle:before{
     content: "";
@@ -973,6 +988,13 @@ table.account-time-table:after {
     padding-bottom: 10px;
     font-size: 18px;
 }
+.ui-controlgroup-controls .ui-radio.ui-mini:last-child {
+    margin-right: 0px !important;
+}
+
+
+
+
 /** smartphone and desktop **/
 @media only screen and (min-width: 360px) {
    
@@ -1087,11 +1109,12 @@ table.account-time-table:after {
         font-size: 1.4em;
         min-height: 2em;
         padding: 0.6em 0px;
-       
     }
     h4.ui-collapsible-heading a.ui-btn span.collapsible-header-block-right span.del-time-fh {
         font-size: 14px;
-        
+    }
+    .ui-radio.ui-mini{
+        margin-right: 40px !important;
     }
      
 
