@@ -13,7 +13,7 @@ ui-page-theme-a .ui-btn:focus{
 }
 .ui-mobile .ui-page {
     min-height: 420px;
-    height: 100%;
+    /*height: 100%;*/
 }
 .fixed-element {
     position: fixed;
@@ -1349,6 +1349,20 @@ table.account-time-table:after {
         font-size: 16px;
     }
    
+}
+@media only screen and (min-width: 960px) {
+    for-radibuttons {
+        margin-right: 30px;
+        font-size: 20px;
+    }
+    ui-radio label.bicycle {
+        width: 50px;
+        height: 60px;
+        line-height: 125px;
+    }
+    .ui-radio.ui-mini {
+        margin-right: 60px !important;
+    }
 }
 @media only screen and (min-width: 980px) {
     .b-mr-button {
